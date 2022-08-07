@@ -471,10 +471,18 @@ Some other ressource :
 * [JavaScript ES6 Arrow Functions Tutorial [web dev simplified][youtube]](https://www.youtube.com/watch?v=h33Srr5J9nY)
 * [JavaScript ES6 Arrow Functions Tutorial [web dev simplified][article]](https://blog.webdevsimplified.com/2020-09/arrow-functions/)
 
+<br>
+
+## Comparison beetween D3.js, Chart.js, p5.js
+
+🚧 Work in progresse 🚧
+
+<br>
 
 ## __Storytelling__ : Why did i decid to get this certification ? 
 I pass this certification for the same reason than i pass the HTML/CSS certification from FCC (freecodecamp) so the reason haven't change and can be found here => https://github.com/Xavier-Pierre-dev/FreeCodeCamp-Certification_Responsive-web-design.
 
+<br>
 
 ## Ressource :
 
