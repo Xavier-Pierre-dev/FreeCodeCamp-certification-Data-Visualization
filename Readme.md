@@ -473,14 +473,81 @@ Some other ressource :
 
 <br>
 
-## Comparison beetween D3.js, Chart.js, p5.js
+## Comparison beetween D3.js, highchart.js, C3.js, Chart.js, p5.js
 
-🚧 Work in progresse 🚧
+||``D3.js``|``highchart.js``|``C3.js``|``Chart.js``|``p5.js``|
+|---|---|---|---|---|---|
+|purpose|``d3.js`` is not a "charting" library. It is a library for creating and manipulating ``SVG/HTML``. It provides tools to help you visualize and manipulate your data. While you can use it to create conventional charts (bar, line, pie, etc...) it's capable of so much more. Of course with this "capable of so much" comes a steeper learning curve. __There are a lot of conventional charting libraries built on top of d3.js__ <br> : nvd3.js, dimple.js, dc.js|This is mainly a library to create graph using svg with high interactivity and easy to use but requiere a paid licence|This is a library build on top of C3.js allowing you to create graph easily in svg but customisation is more limited than d3.js|Chart.js supports 6 basic chart types and is canvas based. This is an really easy library to use but also really limited|p5.js is canvas based, but the purpose is not to make only graph but to make mainly art using canvas.|
+|difficulties in ⭐ : <br> ⭐ hardest <br> to <br> ⭐⭐⭐ easy |<div align="center">⭐</div>|<div align="center">⭐⭐⭐</div>|<div align="center">⭐⭐</div>|<div align="center">⭐⭐⭐</div>|<div align="center">⭐⭐</div>|
+|performance in ⭐ : <br> ⭐ poor <br> to <br> ⭐⭐⭐ good |<div align="center">⭐</div>|<div align="center">⭐</div>|<div align="center">⭐</div>|<div align="center">⭐⭐⭐</div>|<div align="center">⭐⭐</div>|
+|interactivity in ⭐ : <br> ⭐ poor <br> to <br> ⭐⭐⭐ good |<div align="center">⭐⭐⭐</div>|<div align="center">⭐⭐⭐</div>|<div align="center">⭐⭐</div>|<div align="center">⭐⭐</div>|<div align="center">⭐</div>|
+|free|<div align="center">✔️</div>|<div align="center">❌</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
+
+* ``d3.js`` - great for interactive visualizations
+* ``chart.js`` - great for quick and simple
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">D3.js</th>
+      <th style="text-align: center">Chart.js</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Building blocks for constructing data visualisations</td>
+      <td style="text-align: center">Ready to go charts</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Composition of building blocks</td>
+      <td style="text-align: center">Configuration</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SVG or Canvas</td>
+      <td style="text-align: center">Canvas</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Interactivity requires coding</td>
+      <td style="text-align: center">Interactivity (tooltips, series selection) by default</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Responsiveness requires coding</td>
+      <td style="text-align: center">Responsiveness by default</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Legend requires coding</td>
+      <td style="text-align: center">Legend by default</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Good for bespoke data visualisations</td>
+      <td style="text-align: center">Limited to standard charts</td>
+    </tr>
+  </tbody>
+</table>
+
+* [Source [stackoverflow]](https://stackoverflow.com/questions/27347798/comparison-between-d3-js-and-chart-js-only-for-charts)
+* [Source [article]](https://www.createwithdata.com/d3js-or-chartjs/)
+
+### Conclusion
+
+Both D3.js and Chart.js are excellent libraries for visualising data. Chart.js requires far less effort to create charts and should suffice in most cases, especially when standard charts are required. There’s little limit to what D3.js can achieve but it’ll likely require significantly more development effort than Chart.js.
+
+If you’re wanting to make a standard chart (such as line, bar, pie, radar, scatter or bubble) try starting with Chart.js. If you’re after something more bespoke then D3 might be a better choice.
+
+C3.js is a chart.js like build in top of D3.js so that's use svg instead of canvas, performance are lower than chart.js and the libraries doesn't give you the same ease to build similar graphic than chart.js.
+
+Highchart.js allow you to create great chart with high interactivity out of the box. And It's easy to use to but need a paid licence in order to be used. 
 
 <br>
 
 ## __Storytelling__ : Why did i decid to get this certification ? 
 I pass this certification for the same reason than i pass the HTML/CSS certification from FCC (freecodecamp) so the reason haven't change and can be found here => https://github.com/Xavier-Pierre-dev/FreeCodeCamp-Certification_Responsive-web-design.
+
+By the way I already use Chart.js wich is based on canvas instead of dom manipulation for d3.js before inside this two project : 
+* https://github.com/Xavier-Pierre-dev/Covid_tracker
+* https://github.com/Xavier-Pierre-dev/MQTT-to-Kafka-kafka-bridge-display-realtime-chart-with-Flask-and-chart.js
+
+Chart.js was designed to be fast and easy to use base on the canvas API. That's perfect to build simple diagram quickly as long as this is a supported type of diagram by chart.js and you don't need a lot of interactivity.
 
 <br>
 
