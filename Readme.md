@@ -493,6 +493,17 @@ I pass this certification for the same reason than i pass the HTML/CSS certifica
 * [Visualize Data with a Treemap Diagram [Ganesh][article]](https://www.notion.so/Visualize-Data-with-a-Treemap-Diagram-1192d4ebd1164277b769f74eaf7a5d26)
 * [Data Visualization with D3 – Full Course for Beginners [2022][FreeCodeCamp]](https://www.youtube.com/watch?v=xkBheRZTkaw) - Duration : 19:32:36
 
+### Chart.js
+* [chart.js [official][website]](https://www.chartjs.org/)
+* [Chart JS tutorial for beginners | Chart.JS Tutorial [Chart JS][youtube][playlist]](https://www.youtube.com/playlist?list=PLc1g3vwxhg1WOgHSDWWUFljioMJxepLX4)
+* [1.3: Graphing with Chart.js - Working With Data & APIs in JavaScript](https://www.youtube.com/watch?v=5-ptp9tRApM)
+
+### P5.js
+* [p5.js [official][website]]([p5.js](https://p5js.org/))
+* [Learn all the basics of code in JavaScript with p5.js [The coding train][youtube]](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) - Duration (around) : 7:00:00
+* [p5.js Tutorials by Daniel Shiffman/Coding Rainbow [The coding train][youtube]](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) - Duration (around) : 20:00:00
+
+
 ### Javascript : (Async/Await | Promise | ES6 Arrow Functions)
 * Async/Await
   * [async/await [mozilla documention]](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function)
