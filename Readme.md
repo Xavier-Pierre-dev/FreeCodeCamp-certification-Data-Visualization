@@ -77,11 +77,11 @@ online course : https://www.freecodecamp.org/learn/data-visualization/
 <details>
 <summary><CODE>Data Visualization Projects</CODE></summary>
 
-* [Visualize Data with a Bar Chart](./3_Data-Visualization-Projects/1_Visualize-Data-with-a-Bar-Chart) > [code](./3_Data-Visualization-Projects/1_Visualize-Data-with-a-Bar-Chart/freecodecamps.html)  |  [readme](./3_Data-Visualization-Projects/1_Visualize-Data-with-a-Bar-Chart/README.md)
-* [Visualize Data with a Scatterplot Graph](./3_Data-Visualization-Projects/2_Visualize-Data-with-a-Scatterplot-Graph) > [code](./3_Data-Visualization-Projects/2_Visualize-Data-with-a-Scatterplot-Graph/freecodecamps.html)  |  [readme](./3_Data-Visualization-Projects/2_Visualize-Data-with-a-Scatterplot-Graph/README.md)
-* [Visualize Data with a Heat Map](./3_Data-Visualization-Projects/3_Visualize-Data-with-a-Heat-Map) > [code](./3_Data-Visualization-Projects/3_Visualize-Data-with-a-Heat-Map/freecodecamps.html)  |  [readme](./3_Data-Visualization-Projects/3_Visualize-Data-with-a-Heat-Map/README.md)
-* [Visualize Data with a Choropleth Map](./3_Data-Visualization-Projects/4_Visualize-Data-with-a-Choropleth-Map) > [code](./3_Data-Visualization-Projects/4_Visualize-Data-with-a-Choropleth-Map/freecodecamps.html)  |  [readme](./3_Data-Visualization-Projects/4_Visualize-Data-with-a-Choropleth-Map/README.md)
-* [Visualize Data with a Treemap Diagram](./3_Data-Visualization-Projects/5_Visualize-Data-with-a-Treemap-Diagram) > [code](./3_Data-Visualization-Projects/5_Visualize-Data-with-a-Treemap-Diagram/freecodecamps.html)  |  [readme](./3_Data-Visualization-Projects/5_Visualize-Data-with-a-Treemap-Diagram/README.md)
+* [Visualize Data with a Bar Chart](./3_Data-Visualization-Projects/1_Visualize-Data-with-a-Bar-Chart) > [codepen](https://codepen.io/xavier-pierre-dev/pen/mdxpbXJ)  |  [readme](./3_Data-Visualization-Projects/1_Visualize-Data-with-a-Bar-Chart/README.md)
+* [Visualize Data with a Scatterplot Graph](./3_Data-Visualization-Projects/2_Visualize-Data-with-a-Scatterplot-Graph) > [codepen](https://codepen.io/xavier-pierre-dev/pen/zYWWZWv)  |  [readme](./3_Data-Visualization-Projects/2_Visualize-Data-with-a-Scatterplot-Graph/README.md)
+* [Visualize Data with a Heat Map](./3_Data-Visualization-Projects/3_Visualize-Data-with-a-Heat-Map) > [codepen](https://codepen.io/xavier-pierre-dev/pen/ExEQeXP)  |  [readme](./3_Data-Visualization-Projects/3_Visualize-Data-with-a-Heat-Map/README.md)
+* [Visualize Data with a Choropleth Map](./3_Data-Visualization-Projects/4_Visualize-Data-with-a-Choropleth-Map) > [codepen](https://codepen.io/xavier-pierre-dev/pen/wvmmgVP)  |  [readme](./3_Data-Visualization-Projects/4_Visualize-Data-with-a-Choropleth-Map/README.md)
+* [Visualize Data with a Treemap Diagram](./3_Data-Visualization-Projects/5_Visualize-Data-with-a-Treemap-Diagram) > [codepen](https://codepen.io/xavier-pierre-dev/pen/zYWjvBW)  |  [readme](./3_Data-Visualization-Projects/5_Visualize-Data-with-a-Treemap-Diagram/README.md)
 
 </details>
 
@@ -99,8 +99,8 @@ I did some of the project twice in order to practice D3.js with React.js. And ob
 
 |<div align="center">using React + D3</div>|<div align="center">using D3</div>|
 |---|---|
-|![image](Animation_1.gif)|![image](Animation.gif)|
-|![image](Animation_2.gif)|![image](Animation_3.gif)|
+|[![image](Animation_1.gif)](https://codepen.io/xavier-pierre-dev/pen/mdxpbXJ)|[![image](Animation.gif)](https://codepen.io/xavier-pierre-dev/pen/mdxpbXJ)|
+|[![image](Animation_3.gif)](https://codepen.io/xavier-pierre-dev/pen/eYMyvjB)|[![image](Animation_2.gif)](https://codepen.io/xavier-pierre-dev/pen/zYWWZWv)|
 
 For other project I did it only with D3 since I already understand the fact we need to be carefull when we combine d3 with react like most of the d3 method used to display graph base on data are ``append`` method so we need to be carefull and clean the graph first with ``remove`` method to insure that we don't duplicate element inside our dom and fail some test. By the way that's also for avoid to display some data wich are no longer inside our dataset if our dataset change. 
 
@@ -113,7 +113,11 @@ So here is two recommend link in order to get started :
 ### Using D3 only
 #### Heat Map
 
-![image](Animation_5.gif)
+<div align="center">
+
+[![image](Animation_5.gif)](https://codepen.io/xavier-pierre-dev/pen/ExEQeXP)
+
+</div>
 
 Here I create a dynamic legend base on an color array in order to adapt the code of this example https://bl.ocks.org/mbostock/4573883 :
 ```javascript 
@@ -226,7 +230,11 @@ legend.append("g").selectAll("rect")
 
 #### Choropleth map
 
-![image](Animation_7.gif)
+<div align="center">
+
+[![image](Animation_7.gif)](https://codepen.io/xavier-pierre-dev/pen/wvmmgVP)
+
+</div>
 
 The data was initially in a topoJson format, but D3 only support geoJSON to draw paths with, so we need to convert it.
 
@@ -338,7 +346,11 @@ Some example :
 
 #### Tree map 
 
-![image](Animation_8.gif)
+<div align="center">
+
+[![image](Animation_8.gif)](https://codepen.io/xavier-pierre-dev/pen/zYWjvBW)
+
+</div>
 
 Here the interesting point was to deplace elements contains inside group ```g element``` using the ```transform``` ```attribut``` with the ```translate``` method instead of moving multiple element inside each group so that we save some performance.
 
