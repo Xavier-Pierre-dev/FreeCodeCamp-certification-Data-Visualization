@@ -368,7 +368,144 @@ Here the interesting point was to deplace elements contains inside group ```g el
 
 ## Cheatsheet :
 
+### Consume data 
+
+In order to consume data we can use different method like :
+* [fetch](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API)
+* [XMLHttpRequest](https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest)
+* [d3.json](https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js)
+
+But often we want a total control on the order of your request and method. For that we use :
+* [async/await](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function) 
+* [promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+Here is an example from this [codepen](https://codepen.io/xavier-pierre-dev/pen/mdxpbXJ) in order to consume the data inside this ```url``` with promise and the equivalent with async/await :
+```javascript
+const url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json";
+```
+
+
+
+<table>
+    <thead>
+        <tr>
+            <td><strong>async/await</strong></td>
+            <td><strong>promise</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+
+```javascript
+/** with async **/
+async function fetchAsyncData(){
+      const response = await fetch(url);
+      const data = await response.json();
+      createBarChart(data);
+}
+```
+
+</td>
+            <td>
+
+```javascript
+/** with promise **/
+function fetchPromiseData(){ 
+  fetch(url)
+  .then(response => response.json())
+  .then(response => {
+  data = response;
+  createBarChart(data);
+})
+}
+}
+```
+
+</td>
+</tr>
+<tr>
+    <td>In order to use <code>await</code> keyword you need to specify that the function is an <code>async</code> function.
+
+```javascript
+      const response = await fetch(url);
+      const data = await response.json();
+```
+Here ```await``` is use in order to insure that ```fetch(url)``` was completely done before starting the next line.    
+    
+</td>
+    <td>
+
+In reality ```fetch``` method return a ```promise``` and a promise have 3 states :
+* pending: initial state, neither fulfilled nor rejected.
+* fulfilled: meaning that the operation was completed successfully.
+* rejected: meaning that the operation failed.
+
+When you use ```.then``` you insure that ```fetch(url)``` was fullfiled sucessfully and then you launch the code inside the ```.then()```, of course you can use multiple ```.then```
+
+This is a graph extract from [mozilla documentation about promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to illustrate that purpose :
+![image](promises.png)
+
+</td>
+</tr>
+    </tbody>
+</table>
+
+**Note:** d3.json return also a promise so that's work like fetch. On top of that for XMLHttpRequest that's work a little bit differently but in our case like we want to insure the order of the method & request inside our code we use [``XMLHttpRequest.open(method, url, async)``](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open) with ``async=true`` so that we treat the request in asynchrone mode 
+
+<details>
+<summary>documentation extract : <code> XMLHttpRequest.open(method, url, async)</code></summary>
+async <code>optional</code>
+
+An optional Boolean parameter, defaulting to true, indicating whether or not to perform the operation asynchronously. If this value is false, the send() method does not return until the response is received. If true, notification of a completed transaction is provided using event listeners. This must be true if the multipart attribute is true, or an exception will be thrown.
+
+</details>
+
+Some other ressource :
+* [Apprendre le JavaScript : Chapitre 21, Promise, Async & Await [Grafikart.fr][youtube]](https://www.youtube.com/watch?v=uUZxHkcidps) | 
+* [Apprendre le JavaScript : Chapitre 21, Promise, Async & Await [Grafikart.fr][article]](https://grafikart.fr/tutoriels/promise-async-await-875)
+* [fetch [Grafikart.fr][article]](https://grafikart.fr/tutoriels/fetch-1017#autoplay)
+* [Asynchronous Vs Synchronous Programming [web dev simplified][youtube]](https://www.youtube.com/watch?v=Kpn2ajSa92c)
+* [promise [web dev simplified][youtube]](https://www.youtube.com/watch?v=DHvZLI7Db8E)
+* [promise [web dev simplified][article]](https://blog.webdevsimplified.com/2021-09/javascript-promises/)
+* [JavaScript ES6 Arrow Functions Tutorial [web dev simplified][youtube]](https://www.youtube.com/watch?v=h33Srr5J9nY)
+* [JavaScript ES6 Arrow Functions Tutorial [web dev simplified][article]](https://blog.webdevsimplified.com/2020-09/arrow-functions/)
 
 
 ## __Storytelling__ : Why did i decid to get this certification ? 
 I pass this certification for the same reason than i pass the HTML/CSS certification from FCC (freecodecamp) so the reason haven't change and can be found here => https://github.com/Xavier-Pierre-dev/FreeCodeCamp-Certification_Responsive-web-design.
+
+
+## Ressource :
+
+### SVG
+* [svg [mozilla documention]](https://developer.mozilla.org/fr/docs/Web/SVG)
+
+### D3 + React tutorial :
+* [Data Visualization with D3, JavaScript, React - Full Course - Part 1 [2021][FreeCodeCamp]](https://www.youtube.com/watch?v=2LhoCfjm8R4) - Duration : 11:37:15
+* [Data Visualization with D3, JavaScript, React - Full Course - Part 2 [2021][FreeCodeCamp]](https://www.youtube.com/watch?v=H2qPeJx1RDI) - Duration : 5:27:47
+
+### D3 tutorial :
+* [Visualize Data with a Bar Chart [Ganesh][article]](https://www.notion.so/ganeshh123/Visualize-Data-with-a-Bar-Chart-9e5ef4f33375409580a80f659cd8aa93)
+* [Visualize Data with a Scatterplot Graph [Ganesh][article]](https://www.notion.so/Visualize-Data-with-a-Scatterplot-Graph-f3b277dc35294accb4d42a0358b92009)
+* [Visualize Data with a Heat Map [Ganesh][article]](https://www.notion.so/ganeshh123/Visualize-Data-with-a-Heat-Map-12660e493bd940ea95625aa641db574b)
+* [Visualize Data with a Choropleth Map [Ganesh][article]](https://www.notion.so/ganeshh123/WIP-Visualize-Data-with-a-Choropleth-Map-9d91d46e78d4406abc6a0d36f9e089dc)
+* [Visualize Data with a Treemap Diagram [Ganesh][article]](https://www.notion.so/Visualize-Data-with-a-Treemap-Diagram-1192d4ebd1164277b769f74eaf7a5d26)
+* [Data Visualization with D3 – Full Course for Beginners [2022][FreeCodeCamp]](https://www.youtube.com/watch?v=xkBheRZTkaw) - Duration : 19:32:36
+
+### Javascript : (Async/Await | Promise | ES6 Arrow Functions)
+* Async/Await
+  * [async/await [mozilla documention]](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+  * [Asynchronous Vs Synchronous Programming [web dev simplified][youtube]](https://www.youtube.com/watch?v=Kpn2ajSa92c)
+* Promise
+  * [promise [mozilla documention]](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  * [Apprendre le JavaScript : Chapitre 21, Promise, Async & Await [Grafikart.fr][youtube]](https://www.youtube.com/watch?v=uUZxHkcidps) | 
+  * [Apprendre le JavaScript : Chapitre 21, Promise, Async & Await [Grafikart.fr][article]](https://grafikart.fr/tutoriels/promise-async-await-875)
+  * [promise [web dev simplified][youtube]](https://www.youtube.com/watch?v=DHvZLI7Db8E)
+  * [promise [web dev simplified][article]](https://blog.webdevsimplified.com/2021-09/javascript-promises/)
+* Fetch
+  * [API Fetch [mozilla documention]](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API)
+  * [fetch [Grafikart.fr][article]](https://grafikart.fr/tutoriels/fetch-1017#autoplay)
+* ES6 Arrow Functions
+  * [JavaScript ES6 Arrow Functions Tutorial [web dev simplified][youtube]](https://www.youtube.com/watch?v=h33Srr5J9nY)
+  * [JavaScript ES6 Arrow Functions Tutorial [web dev simplified][article]](https://blog.webdevsimplified.com/2020-09/arrow-functions/)
