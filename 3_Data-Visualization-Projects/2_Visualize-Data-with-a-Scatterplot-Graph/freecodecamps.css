@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html{
+    height: 100%
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media only screen and (max-width: 1600px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+#canvas {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    background-color: rgb(56, 58, 74);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+}
+
+.bar{
+    background-color: #2B7A78;
+    border-color: #2B7A78;
+    fill: #2B7A78;
+}
+
+.dot:hover{
+    fill: rgb(221, 221, 221)
+}
+
+g{
+    color: rgb(221, 221, 221)
+}
+
+
+
+#legend, .legend-label{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#title{
+    font-size: 28px;
+    fill: rgb(221, 221, 221);
+    text-transform: uppercase;
+}
+
+#tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #02021F;
+  color: white;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 5px;
+  border-color: black;
+  /* position: absolute; */
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+  pointer-events: none;
+}
+
+#article {
+  padding: 40px;
+  
+}

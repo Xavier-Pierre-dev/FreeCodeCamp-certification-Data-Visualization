@@ -1,0 +1,82 @@
+body {
+    background-color : #708090;
+  }
+  
+  h1, h3 {
+    margin : 0;
+    padding: 0;
+  }
+  
+  .container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  
+  heading {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+  }
+  
+  svg {
+    /*background-color : whitesmoke;*/
+  }
+  
+  .graph-container {
+      display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+  }
+  
+  #canvas {
+    min-height: 600px;
+    max-height: 1500px;
+    min-width: 1000px;
+    font: 10px sans-serif;
+    text-align: center;
+  }
+  
+  #tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #02021F;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5px;
+    border-color: black;
+    /* position: absolute; */
+    box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+    pointer-events: none;
+  }
+  
+  
+  #canvas > rect:hover {
+    /* opacity: 0.2; */
+    stroke-width:1;
+    stroke:rgb(0,0,0);
+    fill:rgb(0,0,0);
+  
+  }
+  
+  svg {
+    background-color: #1d1f20;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .graph-container {
+    padding: 60px;
+  }
+  
+  
