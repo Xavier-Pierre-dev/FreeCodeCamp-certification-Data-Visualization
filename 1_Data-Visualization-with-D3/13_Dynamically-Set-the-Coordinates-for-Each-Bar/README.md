@@ -1,0 +1,79 @@
+<div class="challenge-instructions data-visualization-with-d3"><div><section id="description">
+<p>The last challenge created and appended a rectangle to the <code>svg</code> element for each point in <code>dataset</code> to represent a bar. Unfortunately, they were all stacked on top of each other.</p>
+<p>The placement of a rectangle is handled by the <code>x</code> and <code>y</code> attributes. They tell D3 where to start drawing the shape in the <code>svg</code> area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.</p>
+<p>For a bar chart, all of the bars should sit on the same vertical level, which means the <code>y</code> value stays the same (at 0) for all bars. The <code>x</code> value, however, needs to change as you add new bars. Remember that larger <code>x</code> values push items farther to the right. As you go through the array elements in <code>dataset</code>, the <code>x</code> value should increase.</p>
+<p>The <code>attr()</code> method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually <code>d</code>) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">selection<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"property"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It's important to note that you do NOT need to write a <code>for</code> loop or use <code>forEach()</code> to iterate over the items in the data set. Recall that the <code>data()</code> method parses the data set, and any method that's chained after <code>data()</code> is run once for each item in the data set.</p>
+</section></div><hr/><div><section id="instructions">
+<p>Change the <code>x</code> attribute callback function so it returns the index times 30.</p>
+<p><strong>Note:</strong> Each bar has a width of 25, so increasing each <code>x</code> value by 30 adds some space between the bars. Any value greater than 25 would work in this example.</p>
+</section></div><hr/></div><div class="challenge-instructions data-visualization-with-d3"><div><section id="description">
+<p>The last challenge created and appended a rectangle to the <code>svg</code> element for each point in <code>dataset</code> to represent a bar. Unfortunately, they were all stacked on top of each other.</p>
+<p>The placement of a rectangle is handled by the <code>x</code> and <code>y</code> attributes. They tell D3 where to start drawing the shape in the <code>svg</code> area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.</p>
+<p>For a bar chart, all of the bars should sit on the same vertical level, which means the <code>y</code> value stays the same (at 0) for all bars. The <code>x</code> value, however, needs to change as you add new bars. Remember that larger <code>x</code> values push items farther to the right. As you go through the array elements in <code>dataset</code>, the <code>x</code> value should increase.</p>
+<p>The <code>attr()</code> method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually <code>d</code>) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">selection<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"property"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It's important to note that you do NOT need to write a <code>for</code> loop or use <code>forEach()</code> to iterate over the items in the data set. Recall that the <code>data()</code> method parses the data set, and any method that's chained after <code>data()</code> is run once for each item in the data set.</p>
+</section></div><hr/><div><section id="instructions">
+<p>Change the <code>x</code> attribute callback function so it returns the index times 30.</p>
+<p><strong>Note:</strong> Each bar has a width of 25, so increasing each <code>x</code> value by 30 adds some space between the bars. Any value greater than 25 would work in this example.</p>
+</section></div><hr/></div><div class="challenge-instructions data-visualization-with-d3"><div><section id="description">
+<p>The last challenge created and appended a rectangle to the <code>svg</code> element for each point in <code>dataset</code> to represent a bar. Unfortunately, they were all stacked on top of each other.</p>
+<p>The placement of a rectangle is handled by the <code>x</code> and <code>y</code> attributes. They tell D3 where to start drawing the shape in the <code>svg</code> area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.</p>
+<p>For a bar chart, all of the bars should sit on the same vertical level, which means the <code>y</code> value stays the same (at 0) for all bars. The <code>x</code> value, however, needs to change as you add new bars. Remember that larger <code>x</code> values push items farther to the right. As you go through the array elements in <code>dataset</code>, the <code>x</code> value should increase.</p>
+<p>The <code>attr()</code> method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually <code>d</code>) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">selection<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"property"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It's important to note that you do NOT need to write a <code>for</code> loop or use <code>forEach()</code> to iterate over the items in the data set. Recall that the <code>data()</code> method parses the data set, and any method that's chained after <code>data()</code> is run once for each item in the data set.</p>
+</section></div><hr/><div><section id="instructions">
+<p>Change the <code>x</code> attribute callback function so it returns the index times 30.</p>
+<p><strong>Note:</strong> Each bar has a width of 25, so increasing each <code>x</code> value by 30 adds some space between the bars. Any value greater than 25 would work in this example.</p>
+</section></div><hr/></div><div class="challenge-instructions data-visualization-with-d3"><div><section id="description">
+<p>The last challenge created and appended a rectangle to the <code>svg</code> element for each point in <code>dataset</code> to represent a bar. Unfortunately, they were all stacked on top of each other.</p>
+<p>The placement of a rectangle is handled by the <code>x</code> and <code>y</code> attributes. They tell D3 where to start drawing the shape in the <code>svg</code> area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.</p>
+<p>For a bar chart, all of the bars should sit on the same vertical level, which means the <code>y</code> value stays the same (at 0) for all bars. The <code>x</code> value, however, needs to change as you add new bars. Remember that larger <code>x</code> values push items farther to the right. As you go through the array elements in <code>dataset</code>, the <code>x</code> value should increase.</p>
+<p>The <code>attr()</code> method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually <code>d</code>) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">selection<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"property"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It's important to note that you do NOT need to write a <code>for</code> loop or use <code>forEach()</code> to iterate over the items in the data set. Recall that the <code>data()</code> method parses the data set, and any method that's chained after <code>data()</code> is run once for each item in the data set.</p>
+</section></div><hr/><div><section id="instructions">
+<p>Change the <code>x</code> attribute callback function so it returns the index times 30.</p>
+<p><strong>Note:</strong> Each bar has a width of 25, so increasing each <code>x</code> value by 30 adds some space between the bars. Any value greater than 25 would work in this example.</p>
+</section></div><hr/></div><div class="challenge-instructions data-visualization-with-d3"><div><section id="description">
+<p>The last challenge created and appended a rectangle to the <code>svg</code> element for each point in <code>dataset</code> to represent a bar. Unfortunately, they were all stacked on top of each other.</p>
+<p>The placement of a rectangle is handled by the <code>x</code> and <code>y</code> attributes. They tell D3 where to start drawing the shape in the <code>svg</code> area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.</p>
+<p>For a bar chart, all of the bars should sit on the same vertical level, which means the <code>y</code> value stays the same (at 0) for all bars. The <code>x</code> value, however, needs to change as you add new bars. Remember that larger <code>x</code> values push items farther to the right. As you go through the array elements in <code>dataset</code>, the <code>x</code> value should increase.</p>
+<p>The <code>attr()</code> method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually <code>d</code>) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">selection<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"property"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It's important to note that you do NOT need to write a <code>for</code> loop or use <code>forEach()</code> to iterate over the items in the data set. Recall that the <code>data()</code> method parses the data set, and any method that's chained after <code>data()</code> is run once for each item in the data set.</p>
+</section></div><hr/><div><section id="instructions">
+<p>Change the <code>x</code> attribute callback function so it returns the index times 30.</p>
+<p><strong>Note:</strong> Each bar has a width of 25, so increasing each <code>x</code> value by 30 adds some space between the bars. Any value greater than 25 would work in this example.</p>
+</section></div><hr/></div><div class="challenge-instructions data-visualization-with-d3"><div><section id="description">
+<p>The last challenge created and appended a rectangle to the <code>svg</code> element for each point in <code>dataset</code> to represent a bar. Unfortunately, they were all stacked on top of each other.</p>
+<p>The placement of a rectangle is handled by the <code>x</code> and <code>y</code> attributes. They tell D3 where to start drawing the shape in the <code>svg</code> area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.</p>
+<p>For a bar chart, all of the bars should sit on the same vertical level, which means the <code>y</code> value stays the same (at 0) for all bars. The <code>x</code> value, however, needs to change as you add new bars. Remember that larger <code>x</code> values push items farther to the right. As you go through the array elements in <code>dataset</code>, the <code>x</code> value should increase.</p>
+<p>The <code>attr()</code> method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually <code>d</code>) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">selection<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"property"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It's important to note that you do NOT need to write a <code>for</code> loop or use <code>forEach()</code> to iterate over the items in the data set. Recall that the <code>data()</code> method parses the data set, and any method that's chained after <code>data()</code> is run once for each item in the data set.</p>
+</section></div><hr/><div><section id="instructions">
+<p>Change the <code>x</code> attribute callback function so it returns the index times 30.</p>
+<p><strong>Note:</strong> Each bar has a width of 25, so increasing each <code>x</code> value by 30 adds some space between the bars. Any value greater than 25 would work in this example.</p>
+</section></div><hr/></div>
